@@ -1,0 +1,25 @@
+.todo-list {
+  background-color: #eaf6ff;
+  width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.todo-list .todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.todo-list .todo-item label {
+  margin-left: 8px;
+}
+
+.todo-list .buttons {
+  margin-top: 16px;
+}
+
+.todo-list .buttons button {
+  margin-right: 8px;
+}

@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from './actions/todoActions';
+import './style.css';
 
-const AddTodo = ({ addTodo }) => {
+const AddTodo = () => {
   const [text, setText] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     if (text.trim() !== '') {
-      addTodo(text);
+      dispatch(addTodo(text));
       setText('');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="add-todo" onSubmit={handleSubmit}>
       <input
         type="text"
         value={text}

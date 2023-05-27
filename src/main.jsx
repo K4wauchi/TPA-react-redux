@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import './components/style.css';
 import App from './App';
-import todoReducer from './reducers/todoReducer';
+import rootReducer from './reducers/todoReducer';
 
-const store = createStore(todoReducer);
+const store = createStore(rootReducer);
 
-ReactDOM.render(
+createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
